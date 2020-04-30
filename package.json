@@ -1,7 +1,7 @@
 {
-  "name": "noName",
+  "name": "Overlogic-api",
   "version": "1.0.0",
-  "description": "noName",
+  "description": "Basic REST api to use at Overlogic mobile app",
   "homepage": "",
   "author": {
     "name": "ocFranz",
