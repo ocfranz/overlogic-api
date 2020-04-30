@@ -10,7 +10,7 @@ router.post('/signup', async (req, res) =>{
     try{
         let userExists = await User.findOne({ email : email});
         if(userExists){
-            return res.status(400).send({message : "Email Already Exists"});
+            return res.status(400).send({message : "Email already exists"});
         }else{
             let usernameExists = await User.findOne({ username : username});
             if(usernameExists){
@@ -19,7 +19,7 @@ router.post('/signup', async (req, res) =>{
                 const newUser = new User({username: username, email : email , password : password, name : name});
                 newUser.save()
                     .then( data =>{
-                        return res.status(200).send({ id : data.id , username : data.username, password : data.password});
+                        return res.status(200).send({ id : data.id , username : data.username});
                         /*
                         const payload = {
                             user: { id: data.id}
