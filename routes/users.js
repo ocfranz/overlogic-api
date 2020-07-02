@@ -58,7 +58,7 @@ router.post('/login', async (req, res) =>{
             if(!isMatch){
                 return res.status(400).send({message : "Wrong password"});
             }else{
-                return res.status(400).json({auth: true, id : user.id});
+                return res.status(200).json({auth: true, id : user.id});
             }
         }
     }catch (err){
