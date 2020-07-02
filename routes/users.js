@@ -51,14 +51,14 @@ router.post('/login', async (req, res) =>{
         let user = await User.findOne({username});
         console.log(user);
         if(!user){
-            return res.status(400).send({message : "User does not exist"});
+            return res.status(404).send({message : "User does not exist"});
         }else{
             let isMatch = await bcrypt.compare(password, user.password);
             console.log(isMatch);
             if(!isMatch){
-                return res.status(400).send({message : "Wrong password"});
+                return res.status(200).send({message : "Wrong password", id : user.id, auth: true});
             }else{
-                return res.status(200).json({auth: true, id : user.id});
+                return res.status(200).send({auth: true, id : user.id});
             }
         }
     }catch (err){
