@@ -69,7 +69,7 @@ router.post('/login', async (req, res) =>{
 router.get('/info/:id', async (req, res) =>{
     const { id } = req.params;
     try{
-        let user = await User.findOne({id});
+        let user = await User.findOne({_id: id});
         console.log(user);
         if(!user){
             return res.status(200).send({userExists: false,message : "User does not exist"});
