@@ -1,0 +1,10 @@
+.button{
+    cursor: pointer;
+    padding: 10px 20px;
+
+    &--default{
+        background-color: gray;
+        color: #000000;
+    }
+    
+}

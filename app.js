@@ -15,7 +15,7 @@ app.use(express.static(__dirname + "/src"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-dbConnection();
+//dbConnection();
 
 app.use('/api/v1', apiRouter);
 

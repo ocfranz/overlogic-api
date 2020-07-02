@@ -1,0 +1,19 @@
+.sidebar-item{
+    display: flex;
+    padding: 10px 0px;
+    align-items: center;
+    text-align: center;
+
+    &--deafult{
+        i{
+            color : #000000;
+        }
+
+        &:hover{
+            i{
+                color : red;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,38 @@
+.home{
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    .page-content {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+    .page-content__wrapper{
+        display: flex;
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+
+    .anotations{
+        width: 28%;
+        background-color: #ffffff;
+         height: 100%;
+        .anotations__wrapper{
+            padding: 20px 35px;
+        }
+        .anotations__header{
+            padding: 10px 0px;
+            display: flex;
+            justify-content: space-between;
+            span{
+                font-weight: bold;
+                font-size: 20px;
+            }
+        }
+    }
+    .videoplayer{
+        width: 72%;
+        background-color: #F6F5FA;
+        height: 100%;
+    }
+}
