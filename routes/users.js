@@ -74,7 +74,7 @@ router.get('/info/:id', async (req, res) =>{
         if(!user){
             return res.status(200).send({userExists: false,message : "User does not exist"});
         }else{
-            return res.status(200).send({userExists: true, id : user.id, name : usernam.name});
+            return res.status(200).send({userExists: true, id : user.id, name : user.name});
         }
     }catch (err){
         res.status(500).send(err);
